@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "bd5ae3ab-d3eb-4658-8218-8865505b84ec",
+		"name": "smart-contract",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22791231"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/checkBalance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account\":\"0x2c0524E100bA11A9096d619D37b372994b960D1a\",\r\n    \"contractAdress\":\"0xf26412965bf1CADbb57A2EDeD1065Fd5e494A574\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/checkBalance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"checkBalance"
+					]
+				},
+				"description": "Checking balance of smart-contract using account address and contract address."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/mint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":\"100\",\r\n\r\n\r\n    \"account\":\"0x2c0524E100bA11A9096d619D37b372994b960D1a\",\r\n\r\n    \r\n    \"contractAdress\":\"0xF1B738C87739F9768098932759Fa5b1F8a26C13a\"\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/mint",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"mint"
+					]
+				},
+				"description": "Minting of smart contract"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/burn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"amount\":\"10\",\r\n\r\n\r\n    \"account\":\"0x2c0524E100bA11A9096d619D37b372994b960D1a\",\r\n\r\n    \r\n    \"contractAdress\":\"0x2E5cDb06BABE6eF47800f40d790f95bf455D54D0\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/burn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"burn"
+					]
+				},
+				"description": "Burning of smart-contract\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/contractInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"contractAdress\":\"0xf26412965bf1CADbb57A2EDeD1065Fd5e494A574\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/contractInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"contractInfo"
+					]
+				},
+				"description": "Retreiving contract creation data with contract address."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/transactionDetail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"txnHash\":\"0xdceb1cf69da4adf17e3f416957a13b2c7ecd0b22bb33731c9099c5b0a12258a1\",\r\n   \"contractAdress\":\"0x1Cd2885202f15bDb6921a5D70C93C1D0C52663d2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/transactionDetail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"transactionDetail"
+					]
+				},
+				"description": "Getting a transaction detail using txn_hash."
+			},
+			"response": []
+		}
+	]
+}

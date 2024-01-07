@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  smart-contract-app:
+    build: .
+    environment:
+      - PORT_NUMBER=3002
+    ports:
+      - '3002:3002'
+
+  
